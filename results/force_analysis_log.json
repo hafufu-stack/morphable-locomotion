@@ -1,0 +1,11 @@
+{
+  "experiment": "Force Visualization & Role Differentiation",
+  "best_fitness": 171.09523010253906,
+  "combine_step": 0,
+  "force_correlation_x": 0.7902679139286667,
+  "mean_force_body0": 23.645449841034004,
+  "mean_force_body1": 27.213818233682467,
+  "mean_nn_diff_x": 5.08963559627533,
+  "spring_tension_mean": 0.04951326121205634,
+  "role_analysis": "SYNCHRONIZED"
+}

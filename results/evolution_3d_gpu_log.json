@@ -1,0 +1,27 @@
+{
+  "experiment": "GPU 3D Soft-Body Locomotion Evolution",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "body": {
+    "grid": "6x3x3",
+    "n_particles": 54,
+    "n_springs": 243
+  },
+  "nn": {
+    "input": 5,
+    "hidden": 24,
+    "output": 3,
+    "total_params": 220
+  },
+  "ga": {
+    "population": 300,
+    "generations": 200
+  },
+  "results": {
+    "best_fitness": 176.8335723876953,
+    "displacement_x": 209.04576110839844,
+    "freq": 1.9836664199829102
+  },
+  "elapsed_min": 2.5,
+  "figure": "C:\\Users\\kyjan\\\u7814\u7a76\\morphable-locomotion\\figures\\evolution_3d_gpu.png"
+}

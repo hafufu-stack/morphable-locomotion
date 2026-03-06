@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Papers (managed separately, not in git)
+papers/
+
+# Reports (managed separately, not in git)
+reports/
+report/
+
+# Model checkpoints (too large for git)
+**/checkpoint-*/
+**/model_output/
+*.safetensors
+*.bin
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Secrets & Environment
+.env
+*.env
+.env.*
+secrets/

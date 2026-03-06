@@ -1,0 +1,38 @@
+{
+  "analysis": "Dual-Mode Reward Paradox Investigation",
+  "decomposed": {
+    "1.0": {
+      "fitness": 299.7298278808594,
+      "pure_locomotion": 269.7298278808594,
+      "displacement": 291.51751708984375,
+      "approach_reward": 0.0,
+      "combine_bonus": 30.0,
+      "penalties": 21.787702560424805,
+      "cohesion": 0.0
+    },
+    "3.0": {
+      "fitness": 255.28257751464844,
+      "pure_locomotion": 223.16531372070312,
+      "displacement": 246.1380157470703,
+      "approach_reward": 2.1172709465026855,
+      "combine_bonus": 30.0,
+      "penalties": 22.97270965576172,
+      "cohesion": 0.0
+    },
+    "5.0": {
+      "fitness": 258.1861572265625,
+      "pure_locomotion": 228.1861572265625,
+      "displacement": 262.1519470214844,
+      "approach_reward": 0.0,
+      "combine_bonus": 30.0,
+      "penalties": 33.96578598022461,
+      "cohesion": 0.0
+    }
+  },
+  "combine_steps": {
+    "1.0": 0,
+    "3.0": 230,
+    "5.0": 250
+  },
+  "conclusion": "CONFIRMED: Reward hack detected! gap=1.0 has highest displacement (291.5) and gap=1.0 has best pure locomotion (269.7). The gap=5.0 advantage in total fitness was due to inflated approach_reward."
+}

@@ -1,0 +1,22 @@
+{
+  "experiment": "GPU 3D Combining Robot",
+  "device": "cuda",
+  "bodies": {
+    "per_body": 200,
+    "total": 400
+  },
+  "nn": {
+    "input": 7,
+    "hidden": 32,
+    "output": 3,
+    "params": 356
+  },
+  "results": {
+    "fitness": 170.64508056640625,
+    "freq": 4.842855930328369,
+    "displacement": 183.16336059570312,
+    "combined_step": null,
+    "new_springs": 500
+  },
+  "elapsed_min": 2.5
+}

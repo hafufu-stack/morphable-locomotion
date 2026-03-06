@@ -1,0 +1,23 @@
+{
+  "A_close": {
+    "fitness": 305.335693359375,
+    "time": 3.078264856338501,
+    "displacement": 290.0187683105469,
+    "combined": true,
+    "combine_step": 0
+  },
+  "B_medium": {
+    "fitness": 345.20208740234375,
+    "time": 3.022884277502696,
+    "displacement": 254.76345825195312,
+    "combined": true,
+    "combine_step": 220
+  },
+  "C_far": {
+    "fitness": 346.36810302734375,
+    "time": 3.0136740962664286,
+    "displacement": 249.970947265625,
+    "combined": true,
+    "combine_step": 310
+  }
+}

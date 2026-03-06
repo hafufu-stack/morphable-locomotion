@@ -1,0 +1,41 @@
+{
+  "experiment": "NN Controller v2: Energy-Constrained Locomotion",
+  "purpose": "Force genuine walking behavior instead of constant-push sliding",
+  "nn_architecture": {
+    "input": 4,
+    "hidden": 16,
+    "output": 2,
+    "total_params": 115
+  },
+  "conditions": {
+    "A": {
+      "label": "\u03b1=0.5 \u03b2=1.0 (moderate)",
+      "fitness": 262.7830464104877,
+      "displacement": 262.28873488673423,
+      "energy_norm": 0.19011376952493095,
+      "freq": 2.775646422964118,
+      "elapsed_min": 38.6,
+      "beaten_optimal": "True"
+    },
+    "B": {
+      "label": "\u03b1=2.0 \u03b2=2.0 (strong)",
+      "fitness": 249.44027236437967,
+      "displacement": 261.49980742829024,
+      "energy_norm": 0.15810670458806245,
+      "freq": 3.1620786873380387,
+      "elapsed_min": 38.6,
+      "beaten_optimal": "True"
+    },
+    "C": {
+      "label": "\u03b1=5.0 \u03b2=3.0 (very strong)",
+      "fitness": 215.79205028790378,
+      "displacement": 234.784817234089,
+      "energy_norm": 0.09798553389237044,
+      "freq": 0.871932616482497,
+      "elapsed_min": 41.8,
+      "beaten_optimal": "True"
+    }
+  },
+  "elapsed_min": 119.0,
+  "figure": "C:\\Users\\kyjan\\\u7814\u7a76\\morphable-locomotion\\figures\\evolution_nn_v2.png"
+}

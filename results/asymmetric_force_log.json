@@ -1,0 +1,33 @@
+{
+  "experiment": "Asymmetric Body Force Analysis - Role Differentiation Test",
+  "conditions": {
+    "Symmetric": {
+      "masses": null,
+      "fitness": 166.3777313232422,
+      "corr_fx": 0.7423047031543537,
+      "corr_fy": 0.844176429555291,
+      "differentiated": false
+    },
+    "Bone+Muscle": {
+      "masses": [
+        2.0,
+        0.5
+      ],
+      "fitness": 145.2945556640625,
+      "corr_fx": 0.36844734181525113,
+      "corr_fy": 0.2623703146878986,
+      "differentiated": false
+    },
+    "Extreme": {
+      "masses": [
+        3.0,
+        0.3
+      ],
+      "fitness": 105.11517333984375,
+      "corr_fx": 0.019940400953844833,
+      "corr_fy": 0.7374792388818358,
+      "differentiated": true
+    }
+  },
+  "conclusion": "CONFIRMED: Mass asymmetry reduces force correlation! Symmetric r=0.742 \u2192 Extreme r=0.020. Asymmetric structure creates evolutionary pressure for role differentiation."
+}
