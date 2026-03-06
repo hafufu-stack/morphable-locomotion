@@ -4,7 +4,7 @@
 
 GPU-accelerated evolutionary framework for studying morphable soft-body robots that approach, combine, and locomote as merged entities.
 
-📄 **Paper**: [Zenodo DOI](https://doi.org/10.5281/zenodo.15004380) (v3)
+📄 **Paper**: [Zenodo DOI](https://doi.org/10.5281/zenodo.18883399) (latest version)
 
 ## Key Findings (8 Principles)
 
