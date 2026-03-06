@@ -1,0 +1,56 @@
+{
+  "exp_a_generalization": [
+    {
+      "label": "A0_mass_only",
+      "desc": "Mass 10:1 (baseline)",
+      "fitness": 104.98,
+      "r_fx": -0.009,
+      "r_fy": 0.697,
+      "elapsed_min": 2.1
+    },
+    {
+      "label": "A1_stiffness_only",
+      "desc": "Stiffness 10:1",
+      "fitness": 168.85,
+      "r_fx": 0.579,
+      "r_fy": 0.95,
+      "elapsed_min": 2.4
+    },
+    {
+      "label": "A2_shape_only",
+      "desc": "Shape 200 vs 200",
+      "fitness": 170.66,
+      "r_fx": 0.735,
+      "r_fy": 0.937,
+      "elapsed_min": 1.8
+    },
+    {
+      "label": "A3_mass_stiffness",
+      "desc": "Mass+Stiffness 10:1",
+      "fitness": 94.4,
+      "r_fx": 0.069,
+      "r_fy": 0.787,
+      "elapsed_min": 2.4
+    }
+  ],
+  "exp_b_longterm": {
+    "ngens": 500,
+    "fitness": 117.37,
+    "r_fx": 0.615,
+    "r_fy": 0.649,
+    "elapsed_min": 7.0,
+    "baseline_150gen_fitness": 105.12,
+    "improved": true
+  },
+  "exp_c_morpho": {
+    "evolved_mass_0": 1.052,
+    "evolved_mass_1": 0.948,
+    "evolved_ratio": 1.11,
+    "fitness": 169.82,
+    "r_fx": 0.8,
+    "r_fy": 0.9,
+    "symmetry_broken": false,
+    "elapsed_min": 2.0
+  },
+  "total_time_min": 20.0
+}
