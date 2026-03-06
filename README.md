@@ -1,12 +1,12 @@
 # Morphable Locomotion
 
-**Emergent Role Differentiation in Morphable Soft-Body Robots: From Symmetry Locks to Environmental Differentiation**
+**Emergent Role Differentiation in Morphable Soft-Body Robots: From Symmetry Locks to Muscle Synergy**
 
 GPU-accelerated evolutionary framework for studying morphable soft-body robots that approach, combine, and locomote as merged entities.
 
 📄 **Paper**: [Zenodo DOI](https://doi.org/10.5281/zenodo.18883399) (latest version)
 
-## Key Findings (8 Principles)
+## Key Findings (12 Principles)
 
 ### 1. Symmetry Locks Theorem
 Symmetric bodies with shared controllers produce synchronized behavior (r=0.742). Functional differentiation **cannot** emerge without asymmetry.
@@ -39,16 +39,28 @@ Mass ratio **3:1** maximizes Differentiation×Fitness (93.5). The r(Fx) curve is
 | 10:1 | +100.4 | 0.165 | 83.9 |
 
 ### 7. Degrees of Freedom Trap *(v3)*
-Adding one NN output dimension (3→4 for dynamic mass control) causes a **256-point fitness collapse** (+175 → −81) that persists even under curriculum learning ("Developmental Unlocking"). Parallels biological reliance on low-dimensional motor synergies.
+Adding per-particle mass control (body-wise softmax + EMA) causes a **256-point fitness collapse** (+175 → −81) that persists even under curriculum learning. Parallels biological reliance on low-dimensional motor synergies.
 
-### 8. Environmental Differentiation *(v3)* 🔥
-Asymmetric ground friction induces **complete role differentiation** (r=−0.032) in **symmetric bodies**, achieving the **highest fitness** across all experiments (+181). Intelligence emerges at the body-environment boundary.
+### 8. Environmental Differentiation *(v3)*
+Asymmetric ground friction induces **complete role differentiation** (r=−0.032) in **symmetric bodies**, achieving fitness +181. Intelligence emerges at the body-environment boundary.
 
-| Condition | Friction | r(Fx) | Fitness |
+### 9. No-Cost Differentiation *(v4)* 🔥
+Friction asymmetry induces differentiation **without fitness cost** — fitness and differentiation increase simultaneously (Diff×Fit = **171.0**, 1.8× mass Sweet Spot). Fundamentally different from mass asymmetry trade-off.
+
+### 10. Asymmetry Interference *(v4)*
+Combining body + environmental asymmetry produces **destructive interference** (+179 → +169). The optimal strategy is a single asymmetry source.
+
+### 11. Muscle Synergy Principle *(v4)* 🏆
+Compressing dynamic mass control from 200D to **1D center-of-mass shift** overcomes the DoF Trap, achieving the **all-time highest fitness (+210)** — 21% above baseline. Parallels biological muscle synergy patterns.
+
+| Condition | Outputs | Fitness | Improvement |
 |---|---|---|---|
-| Uniform | 3:3 | 0.851 | +168 |
-| Mild | 0.5:3 | 0.356 | +179 |
-| **Extreme** | **0.1:5** | **−0.032** | **+181** 🏆 |
+| Fixed (3-out) | 3 | +173 | baseline |
+| **Synergy (α=0.9)** | **4 (1D shift)** | **+210** 🏆 | **+21%** |
+| Per-particle (DoF Trap) | 4 (200D) | −81 | −147% |
+
+### 12. Adaptive Robustness *(v4)*
+Controllers evolved under environmental reversal maintain near-optimal performance (+171), trading only 4% peak performance for environmental generality.
 
 ## System
 
@@ -71,7 +83,10 @@ src/
 ├── extension_experiments.py       # v2: Generalization (stiffness/shape/combined)
 ├── differentiation_dynamics.py    # v2: 1000-gen temporal tracking
 ├── dynamic_mass_transfer.py       # v3: Dynamic mass transfer (DoF Trap)
-└── season3_experiments.py         # v3: Sweet Spot, Dev Unlocking, Swamp Test
+├── season3_experiments.py         # v3: Sweet Spot, Dev Unlocking, Swamp Test
+├── season4_experiments.py         # v4: Friction Sweet Spot, Double Asymmetry
+├── season4b_experiments.py        # v4: Muscle Synergy, Environmental Reversal
+└── perdim_verification.py         # v4: DoF Trap mechanism verification
 figures/                           # Generated visualizations
 results/                           # JSON experiment logs
 reports/                           # Extension experiment reports
@@ -92,6 +107,10 @@ python src/extension_experiments.py
 
 # v3: Sweet Spot + DoF Trap + Swamp Test (~35 min)
 python src/season3_experiments.py
+
+# v4: Season 4 experiments (~25 min each)
+python src/season4_experiments.py
+python src/season4b_experiments.py
 ```
 
 ## Requirements

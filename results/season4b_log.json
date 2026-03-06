@@ -1,0 +1,65 @@
+{
+  "exp12_muscle_synergy": [
+    {
+      "label": "fixed_3out",
+      "fitness": 172.94,
+      "r_fx": 0.961,
+      "elapsed": 4.0
+    },
+    {
+      "label": "synergy_1D_s0.5",
+      "fitness": 188.46,
+      "r_fx": 0.598,
+      "elapsed": 5.5
+    },
+    {
+      "label": "synergy_1D_s0.9",
+      "fitness": 209.77,
+      "r_fx": 0.697,
+      "elapsed": 5.4
+    },
+    {
+      "label": "perdim_DoF_trap",
+      "fitness": 196.43,
+      "r_fx": 0.858,
+      "elapsed": 4.2
+    }
+  ],
+  "exp13_environmental_reversal": [
+    {
+      "label": "normal_asym",
+      "fitness": 177.64,
+      "r_fx": 0.352,
+      "elapsed": 2.4,
+      "flip": "none"
+    },
+    {
+      "label": "flipped_replay",
+      "fitness": 128.07,
+      "r_fx": 0.312,
+      "elapsed": 0,
+      "flip": "full_flip"
+    },
+    {
+      "label": "midflip_replay",
+      "fitness": 145.0,
+      "r_fx": 0.373,
+      "elapsed": 0,
+      "flip": "mid_300"
+    },
+    {
+      "label": "plastic_trained",
+      "fitness": 170.52,
+      "r_fx": 0.575,
+      "elapsed": 2.2,
+      "flip": "trained_with_flip"
+    },
+    {
+      "label": "symmetric_control",
+      "fitness": 165.0,
+      "r_fx": 0.705,
+      "elapsed": 2.2,
+      "flip": "none"
+    }
+  ]
+}
