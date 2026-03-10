@@ -1,0 +1,90 @@
+{
+  "exp14_synergy_env": [
+    {
+      "label": "synergy_sym",
+      "n_syn": 1,
+      "friction": "sym",
+      "fitness": 213.76,
+      "r_fx": 0.668
+    },
+    {
+      "label": "synergy_env",
+      "n_syn": 1,
+      "friction": "0.1:5",
+      "fitness": 211.42,
+      "r_fx": 0.578
+    },
+    {
+      "label": "fixed_env",
+      "n_syn": 0,
+      "friction": "0.1:5",
+      "fitness": 183.49,
+      "r_fx": 0.215
+    },
+    {
+      "label": "fixed_sym",
+      "n_syn": 0,
+      "friction": "sym",
+      "fitness": 170.68,
+      "r_fx": 0.872
+    }
+  ],
+  "exp15_synergy_dims": [
+    {
+      "label": "0D",
+      "n_dims": 0,
+      "n_outputs": 3,
+      "fitness": 172.56,
+      "r_fx": 0.892,
+      "elapsed": 3.8
+    },
+    {
+      "label": "1D",
+      "n_dims": 1,
+      "n_outputs": 4,
+      "fitness": 211.52,
+      "r_fx": 0.499,
+      "elapsed": 3.8
+    },
+    {
+      "label": "2D",
+      "n_dims": 2,
+      "n_outputs": 5,
+      "fitness": 216.41,
+      "r_fx": 0.618,
+      "elapsed": 4.0
+    },
+    {
+      "label": "3D",
+      "n_dims": 3,
+      "n_outputs": 6,
+      "fitness": 216.33,
+      "r_fx": 0.581,
+      "elapsed": 4.1
+    },
+    {
+      "label": "5D",
+      "n_dims": 5,
+      "n_outputs": 8,
+      "fitness": 205.63,
+      "r_fx": 0.42,
+      "elapsed": 4.4
+    },
+    {
+      "label": "10D",
+      "n_dims": 10,
+      "n_outputs": 13,
+      "fitness": 206.22,
+      "r_fx": 0.529,
+      "elapsed": 5.3
+    },
+    {
+      "label": "50D",
+      "n_dims": 50,
+      "n_outputs": 53,
+      "fitness": 159.68,
+      "r_fx": 0.788,
+      "elapsed": 12.5
+    }
+  ]
+}
