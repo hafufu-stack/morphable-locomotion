@@ -6,69 +6,48 @@ GPU-accelerated evolutionary framework for studying morphable soft-body robots t
 
 📄 **Paper**: [Zenodo DOI](https://doi.org/10.5281/zenodo.18883399) (latest version)
 
-## Key Findings (15 Principles)
+## Key Findings (19 Principles)
 
-### 1. Symmetry Locks Theorem
-Symmetric bodies with shared controllers produce synchronized behavior (r=0.742). Functional differentiation **cannot** emerge without asymmetry. Confirmed for N-body systems (v5).
+### Theme I: Symmetry & Differentiation (1–5)
+1. **Symmetry Locks Theorem** — Symmetric bodies synchronize (r=0.742). Differentiation requires asymmetry. Confirmed for N-body and decentralized architectures.
+2. **Inertial Asymmetry Principle** *(v2)* — Only **mass** asymmetry drives differentiation (F=ma).
+3. **Transient Differentiation** *(v2)* — V-shaped trajectory: peak at gen 25, partial reabsorption.
+4. **Reward Paradox** — Multi-phase fitness can mask poor locomotion.
+5. **Symmetry Optimality** *(v2)* — Evolution maintains symmetric masses (1.11:1).
 
-### 2. Inertial Asymmetry Principle *(v2)*
-Only **mass** asymmetry drives differentiation. Stiffness (r=0.579) and shape (r=0.735) asymmetries fail — because only F=ma creates different accelerations from identical neural outputs.
+### Theme II: Efficiency–Specialization Trade-offs (6–8)
+6. **The Sweet Spot** *(v3)* — Mass ratio **3:1** maximizes Diff×Fit (93.5).
+7. **Degrees of Freedom Trap** *(v3)* — Per-particle control collapses fitness (+175 → −81).
+8. **Environmental Differentiation** *(v3)* — Asymmetric friction induces differentiation (r=−0.032) at +181.
 
-### 3. Transient Differentiation *(v2)*
-Role differentiation follows a **V-shaped trajectory** over 1000 generations — peaking at gen 25 (r=0.056) then partially reabsorbing to r≈0.58.
+### Theme III: Environmental Control (9–10)
+9. **No-Cost Differentiation** *(v4)* 🔥 — Friction differentiates without fitness cost (Diff×Fit = 171.0).
+10. **Asymmetry Interference** *(v4)* — Body + env asymmetry = destructive interference.
 
-### 4. Reward Paradox
-Multi-phase fitness functions can mask poor locomotion performance. Decomposed fitness tracking is essential.
+### Theme IV: Dimensional Compression (11–14)
+11. **Muscle Synergy** *(v4)* 🏆 — 1D center-of-mass shift overcomes DoF Trap (+210).
+12. **Adaptive Robustness** *(v4)* — Reversal-trained controllers maintain +171.
+13. **Synergy Dimension Optimality** *(v5)* 🏆 — 2–3D synergy = all-time record **+216**.
+14. **Dynamic Resonance** *(v5)* — Synergy bypasses Interference (+211 under env asymmetry).
 
-### 5. Symmetry Optimality *(v2)*
-When body masses are evolvable genes, evolution maintains symmetric masses (ratio 1.11:1).
+### Theme V: Architectural Invariance (15–19) 🆕
+15. **N-Body Selective Differentiation** *(v5)* 🔥 — Only mass-different pairs differentiate; mirror sync r=0.996.
+16. **Neural Synchronization** *(v6)* 🧠 — Spring cutting doesn't disrupt mirror sync (r₀₂ ≥ 0.977). Sync is neural, not physical.
+17. **Convergent Strategy** *(v6)* — Independent NNs synchronize (r=0.952) without weight sharing.
+18. **Physical Inevitability** *(v6)* 🔥 — Independent NNs differentiate **more strongly** (r=−0.301) than shared NNs (r=0.571) under mass asymmetry.
+19. **Parasitic Drag Cost** *(v6)* — Dead body costs 61% fitness. Cooperation = 2.6× solo.
 
-### 6. The Sweet Spot *(v3)*
-Mass ratio **3:1** maximizes Differentiation×Fitness (93.5). The r(Fx) curve is **non-monotonic**.
-
-### 7. Degrees of Freedom Trap *(v3)*
-Adding per-particle mass control causes a **256-point fitness collapse** (+175 → −81) that persists even under curriculum learning.
-
-### 8. Environmental Differentiation *(v3)*
-Asymmetric ground friction induces **complete role differentiation** (r=−0.032) in **symmetric bodies** at fitness +181.
-
-### 9. No-Cost Differentiation *(v4)* 🔥
-Friction asymmetry induces differentiation **without fitness cost** (Diff×Fit = **171.0**, 1.8× mass Sweet Spot).
-
-### 10. Asymmetry Interference *(v4)*
-Combining body + environmental asymmetry produces **destructive interference** (+179 → +169).
-
-### 11. Muscle Synergy Principle *(v4)* 🏆
-Compressing dynamic mass control to **1D center-of-mass shift** overcomes the DoF Trap (+210, 21% above baseline).
-
-### 12. Adaptive Robustness *(v4)*
-Controllers evolved under environmental reversal maintain near-optimal performance (+171).
-
-### 13. Synergy Dimension Optimality *(v5)* 🏆
-The optimal number of synergy dimensions is **2–3**, achieving all-time highest fitness (**+216**). Performance degrades gracefully — even 50D stays positive (+160), unlike the catastrophic DoF Trap (−81).
-
-| Dims | Fitness | Interpretation |
-|---|---|---|
-| 0D | +173 | Baseline (fixed) |
-| **2–3D** | **+216** 🏆 | Sweet Spot |
-| 50D | +160 | Graceful degradation |
-
-### 14. Dynamic Resonance *(v5)*
-Dynamic mass control (Muscle Synergy) **bypasses** the Asymmetry Interference Principle, maintaining +211 under environmental asymmetry (vs +169 for fixed asymmetry).
-
-### 15. N-Body Selective Differentiation *(v5)* 🔥
-In 3-body systems (600 particles), differentiation is **selective** — only mass-different pairs differentiate while equal-mass pairs remain synchronized.
-
-| Mass Ratio | r(0-1) | r(1-2) | r(0-2) | Interpretation |
-|---|---|---|---|---|
-| 1:1:1 | 0.931 | 0.912 | 0.944 | All synchronized |
-| **3:1:1** | **−0.034** | **0.835** | **−0.010** | **Body 0 only differentiates** |
-| 5:1:5 | 0.722 | 0.730 | **0.996** | Mirror symmetry |
+| Architecture | Mass | Fitness | r(Fx) |
+|---|---|---|---|
+| Shared NN | 1:1 | +174 | 0.942 |
+| Independent NNs | 1:1 | +167 | 0.952 |
+| Shared NN | 3:1 | +100 | 0.571 |
+| **Independent NNs** | **3:1** | **+96** | **−0.301** 🔥 |
 
 ## System
 
 - **Physics**: 400–600 particle spring-mass soft bodies (Delaunay triangulation)
-- **Controller**: Evolved neural network (7→32→3/4/5, up to 356+ parameters)
+- **Controller**: Evolved neural network (7→32→3/4/5, up to 712 parameters for dual-brain)
 - **Evolution**: (μ+λ) strategy, 200 population, up to 1000 generations
 - **GPU**: Full batch parallelization on NVIDIA RTX 5080 Laptop (< 3 min per 150-gen run)
 - **Framework**: PyTorch (CUDA)
@@ -91,7 +70,9 @@ src/
 ├── season4b_experiments.py        # v4: Muscle Synergy, Environmental Reversal
 ├── perdim_verification.py         # v4: DoF Trap mechanism verification
 ├── season5_experiments.py         # v5: Synergy Dimension Sweep, Dynamic Resonance
-└── season5b_experiments.py        # v5: 2D Synergy×Env, 3-Body Combination
+├── season5b_experiments.py        # v5: 2D Synergy×Env, 3-Body Combination
+├── season6_experiments.py         # v6: Phantom Synchronization, Decentralized Brains
+└── season6b_experiments.py        # v6: Physical Inevitability, Dead Body
 figures/                           # Generated visualizations
 results/                           # JSON experiment logs
 papers/                            # LaTeX paper source
@@ -100,21 +81,20 @@ papers/                            # LaTeX paper source
 ## Quick Start
 
 ```bash
-# Evolve a V2.1 combining robot (GPU required)
-python src/evolve_combine.py
-
-# v3: Sweet Spot + DoF Trap + Swamp Test (~35 min)
+# v3: Sweet Spot + DoF Trap (~35 min)
 python src/season3_experiments.py
 
 # v4: Season 4 experiments (~25 min each)
 python src/season4_experiments.py
 python src/season4b_experiments.py
 
-# v5: Synergy Dimension Sweep + Dynamic Resonance (~60 min)
+# v5: Synergy Dimension + 3-Body (~90 min)
 python src/season5_experiments.py
-
-# v5: 3-Body Combination (~30 min)
 python src/season5b_experiments.py
+
+# v6: Phantom Sync + Decentralized + Dead Body (~40 min)
+python src/season6_experiments.py
+python src/season6b_experiments.py
 ```
 
 ## Requirements

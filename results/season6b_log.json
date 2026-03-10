@@ -1,0 +1,26 @@
+{
+  "exp19": {
+    "decentralized_31": {
+      "fitness": 96.39,
+      "r_fx": -0.301
+    },
+    "shared_31": {
+      "fitness": 99.88,
+      "r_fx": 0.571
+    }
+  },
+  "exp20": {
+    "dead1_sym": {
+      "fitness": 59.32,
+      "r_fx": 0.0
+    },
+    "dead0_sym": {
+      "fitness": 68.26,
+      "r_fx": 0.0
+    },
+    "alive_sym": {
+      "fitness": 173.27,
+      "r_fx": 0.828
+    }
+  }
+}
