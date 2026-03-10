@@ -1,0 +1,72 @@
+{
+  "alpha_0.0": {
+    "alpha": 0.0,
+    "fitness_0": 195.84,
+    "fitness_1": 195.84,
+    "displacement": 195.84,
+    "energy_0": 8.51,
+    "energy_1": 12.51,
+    "fitness_gap": 0.0,
+    "energy_gap": -4.0
+  },
+  "alpha_0.5": {
+    "alpha": 0.5,
+    "fitness_0": 186.47,
+    "fitness_1": 187.81,
+    "displacement": 192.82,
+    "energy_0": 12.71,
+    "energy_1": 10.01,
+    "fitness_gap": 1.35,
+    "energy_gap": 2.69
+  },
+  "alpha_1.0": {
+    "alpha": 1.0,
+    "fitness_0": 178.53,
+    "fitness_1": 180.11,
+    "displacement": 189.09,
+    "energy_0": 10.56,
+    "energy_1": 8.98,
+    "fitness_gap": 1.58,
+    "energy_gap": 1.58
+  },
+  "alpha_2.0": {
+    "alpha": 2.0,
+    "fitness_0": 163.52,
+    "fitness_1": 171.37,
+    "displacement": 186.24,
+    "energy_0": 11.36,
+    "energy_1": 7.44,
+    "fitness_gap": 7.85,
+    "energy_gap": 3.92
+  },
+  "alpha_3.0": {
+    "alpha": 3.0,
+    "fitness_0": 146.92,
+    "fitness_1": 165.76,
+    "displacement": 181.84,
+    "energy_0": 11.64,
+    "energy_1": 5.36,
+    "fitness_gap": 18.84,
+    "energy_gap": 6.28
+  },
+  "alpha_5.0": {
+    "alpha": 5.0,
+    "fitness_0": 109.1,
+    "fitness_1": 150.75,
+    "displacement": 170.74,
+    "energy_0": 12.33,
+    "energy_1": 4.0,
+    "fitness_gap": 41.65,
+    "energy_gap": 8.33
+  },
+  "alpha_10.0": {
+    "alpha": 10.0,
+    "fitness_0": 61.45,
+    "fitness_1": 130.95,
+    "displacement": 166.28,
+    "energy_0": 10.48,
+    "energy_1": 3.53,
+    "fitness_gap": 69.51,
+    "energy_gap": 6.95
+  }
+}

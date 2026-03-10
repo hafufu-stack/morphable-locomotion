@@ -1,0 +1,32 @@
+{
+  "a3_sym": {
+    "alpha": 3.0,
+    "mass": "1.0:1.0",
+    "fitness_0": 145.73,
+    "fitness_1": 164.49,
+    "displacement": 181.22,
+    "energy_0": 11.83,
+    "energy_1": 5.57,
+    "fitness_gap": 18.77
+  },
+  "a3_31": {
+    "alpha": 3.0,
+    "mass": "3.0:1.0",
+    "fitness_0": 67.99,
+    "fitness_1": 95.5,
+    "displacement": 108.94,
+    "energy_0": 13.65,
+    "energy_1": 4.48,
+    "fitness_gap": 27.51
+  },
+  "a3_13": {
+    "alpha": 3.0,
+    "mass": "1.0:3.0",
+    "fitness_0": 80.94,
+    "fitness_1": 92.54,
+    "displacement": 112.44,
+    "energy_0": 10.5,
+    "energy_1": 6.63,
+    "fitness_gap": 11.6
+  }
+}

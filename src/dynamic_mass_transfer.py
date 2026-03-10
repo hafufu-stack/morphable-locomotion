@@ -1,5 +1,5 @@
 """
-Experiment G: Dynamic Mass Transfer (T-1000 Mode)
+Experiment G: Dynamic Mass Transfer (Morphable Mode)
 =====================================================
 Each particle's mass can shift during locomotion. The NN gets a 4th output:
 "mass desire" - how much mass this particle wants. Mass is redistributed
@@ -10,7 +10,7 @@ Conditions:
 - G1: Dynamic mass 1:1 (NN controls mass distribution, 150gen)
 - G2: Dynamic mass 10:1 (asymmetric + dynamic, 150gen)
 
-Question: Can the NN learn to shift mass like T-1000 liquid metal?
+Question: Can the NN learn to dynamically shift mass between bodies?
 """
 
 import numpy as np
@@ -405,7 +405,7 @@ def main():
     # ================================================================
     print("\nGenerating figure...")
     fig, axes = plt.subplots(1, 3, figsize=(20, 6))
-    fig.suptitle("Experiment G: Dynamic Mass Transfer (T-1000 Mode)", fontsize=14, fontweight="bold")
+    fig.suptitle("Experiment G: Dynamic Mass Transfer (Morphable Mode)", fontsize=14, fontweight="bold")
 
     # Panel 1: Fitness comparison
     ax = axes[0]
@@ -474,7 +474,7 @@ def main():
     dynamic_benefit = results["G1_dynamic_1:1"]["fitness"] - results["G0_fixed_1:1"]["fitness"]
     print(f"\n  Dynamic mass benefit (1:1): {dynamic_benefit:+.2f}")
     if dynamic_benefit > 0:
-        print("  => DYNAMIC MASS HELPS! T-1000 mode improves locomotion!")
+        print("  => DYNAMIC MASS HELPS! Morphable mode improves locomotion!")
     else:
         print("  => Dynamic mass does not help (or slightly hurts).")
 

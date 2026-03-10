@@ -1,0 +1,15 @@
+{
+  "23a": {
+    "fitness": 173.0,
+    "separations": 31,
+    "recombinations": 31
+  },
+  "23b": {
+    "fitness": 9.12,
+    "separations": 34,
+    "recombinations": 34
+  },
+  "23c": {
+    "fitness": 173.21
+  }
+}

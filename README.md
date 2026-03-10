@@ -6,43 +6,41 @@ GPU-accelerated evolutionary framework for studying morphable soft-body robots t
 
 📄 **Paper**: [Zenodo DOI](https://doi.org/10.5281/zenodo.18883399) (latest version)
 
-## Key Findings (19 Principles)
+## Key Findings (22 Principles)
 
 ### Theme I: Symmetry & Differentiation (1–5)
-1. **Symmetry Locks Theorem** — Symmetric bodies synchronize (r=0.742). Differentiation requires asymmetry. Confirmed for N-body and decentralized architectures.
-2. **Inertial Asymmetry Principle** *(v2)* — Only **mass** asymmetry drives differentiation (F=ma).
-3. **Transient Differentiation** *(v2)* — V-shaped trajectory: peak at gen 25, partial reabsorption.
+1. **Symmetry Locks Theorem** — Symmetric bodies synchronize (r=0.742). Differentiation requires asymmetry.
+2. **Inertial Asymmetry Principle** — Only **mass** asymmetry drives differentiation (F=ma).
+3. **Transient Differentiation** — V-shaped trajectory: peak at gen 25, partial reabsorption.
 4. **Reward Paradox** — Multi-phase fitness can mask poor locomotion.
-5. **Symmetry Optimality** *(v2)* — Evolution maintains symmetric masses (1.11:1).
+5. **Symmetry Optimality** — Evolution maintains symmetric masses (1.11:1).
 
 ### Theme II: Efficiency–Specialization Trade-offs (6–8)
-6. **The Sweet Spot** *(v3)* — Mass ratio **3:1** maximizes Diff×Fit (93.5).
-7. **Degrees of Freedom Trap** *(v3)* — Per-particle control collapses fitness (+175 → −81).
-8. **Environmental Differentiation** *(v3)* — Asymmetric friction induces differentiation (r=−0.032) at +181.
+6. **The Sweet Spot** — Mass ratio **3:1** maximizes Diff×Fit (93.5).
+7. **Degrees of Freedom Trap** — Per-particle control collapses fitness (+175 → −81).
+8. **Environmental Differentiation** — Asymmetric friction induces differentiation (r=−0.032) at +181.
 
 ### Theme III: Environmental Control (9–10)
-9. **No-Cost Differentiation** *(v4)* 🔥 — Friction differentiates without fitness cost (Diff×Fit = 171.0).
-10. **Asymmetry Interference** *(v4)* — Body + env asymmetry = destructive interference.
+9. **No-Cost Differentiation** 🔥 — Friction differentiates without fitness cost (Diff×Fit = 171.0).
+10. **Asymmetry Interference** — Body + env asymmetry = destructive interference.
 
 ### Theme IV: Dimensional Compression (11–14)
-11. **Muscle Synergy** *(v4)* 🏆 — 1D center-of-mass shift overcomes DoF Trap (+210).
-12. **Adaptive Robustness** *(v4)* — Reversal-trained controllers maintain +171.
-13. **Synergy Dimension Optimality** *(v5)* 🏆 — 2–3D synergy = all-time record **+216**.
-14. **Dynamic Resonance** *(v5)* — Synergy bypasses Interference (+211 under env asymmetry).
+11. **Muscle Synergy** 🏆 — 1D center-of-mass shift overcomes DoF Trap (+210).
+12. **Adaptive Robustness** — Reversal-trained controllers maintain +171.
+13. **Synergy Dimension Optimality** 🏆 — 2–3D synergy = all-time record **+216**.
+14. **Dynamic Resonance** — Synergy bypasses Interference (+211 under env asymmetry).
 
-### Theme V: Architectural Invariance (15–19) 🆕
-15. **N-Body Selective Differentiation** *(v5)* 🔥 — Only mass-different pairs differentiate; mirror sync r=0.996.
-16. **Neural Synchronization** *(v6)* 🧠 — Spring cutting doesn't disrupt mirror sync (r₀₂ ≥ 0.977). Sync is neural, not physical.
-17. **Convergent Strategy** *(v6)* — Independent NNs synchronize (r=0.952) without weight sharing.
-18. **Physical Inevitability** *(v6)* 🔥 — Independent NNs differentiate **more strongly** (r=−0.301) than shared NNs (r=0.571) under mass asymmetry.
-19. **Parasitic Drag Cost** *(v6)* — Dead body costs 61% fitness. Cooperation = 2.6× solo.
+### Theme V: Architectural Invariance (15–19)
+15. **N-Body Selective Differentiation** 🔥 — Only mass-different pairs differentiate; mirror sync r=0.996.
+16. **Neural Synchronization** 🧠 — Spring cutting doesn't disrupt mirror sync (r₀₂ ≥ 0.977).
+17. **Convergent Strategy** — Independent NNs synchronize (r=0.952) without weight sharing.
+18. **Physical Inevitability** 🔥 — Independent NNs differentiate **more strongly** (r=−0.301) than shared NNs (r=0.571).
+19. **Parasitic Drag Cost** — Dead body costs 61% fitness. Cooperation = 2.6× solo.
 
-| Architecture | Mass | Fitness | r(Fx) |
-|---|---|---|---|
-| Shared NN | 1:1 | +174 | 0.942 |
-| Independent NNs | 1:1 | +167 | 0.952 |
-| Shared NN | 3:1 | +100 | 0.571 |
-| **Independent NNs** | **3:1** | **+96** | **−0.301** 🔥 |
+### Theme VI: Social Dynamics (20–22) 🆕
+20. **Parasitic Phase Transition** 🔥 — Co-evolutionary energy costs produce freeriders. Dose-response gap: 0 → +70 across α=0–10. Critical transition at α ≈ 2. Unconditional worker emerges (no reciprocal altruism). Initial position (not mass) determines worker/freeloader.
+21. **Architecture–Environment Interaction** — Independent NNs + friction = highest fitness (+189) but weaker differentiation (r=0.430).
+22. **Topology Pulsation** 🤖 — Given spring-control ability, evolution discovers 31-cycle separation/recombination per simulation without fitness loss.
 
 ## System
 
@@ -72,7 +70,11 @@ src/
 ├── season5_experiments.py         # v5: Synergy Dimension Sweep, Dynamic Resonance
 ├── season5b_experiments.py        # v5: 2D Synergy×Env, 3-Body Combination
 ├── season6_experiments.py         # v6: Phantom Synchronization, Decentralized Brains
-└── season6b_experiments.py        # v6: Physical Inevitability, Dead Body
+├── season6b_experiments.py        # v6: Physical Inevitability, Dead Body
+├── season7_experiments.py         # v7: Parasite's Dilemma, Indep×Friction
+├── exp21b_parasite_sweep.py       # v7: 7-point alpha dose-response
+├── exp21c_parasite_mass.py        # v7: Parasite × Mass factorial
+└── exp23_topology_control.py      # v7: Topology pulsation
 figures/                           # Generated visualizations
 results/                           # JSON experiment logs
 papers/                            # LaTeX paper source
@@ -95,6 +97,11 @@ python src/season5b_experiments.py
 # v6: Phantom Sync + Decentralized + Dead Body (~40 min)
 python src/season6_experiments.py
 python src/season6b_experiments.py
+
+# v7: Parasite's Dilemma + Topology Control (~90 min)
+python src/season7_experiments.py
+python src/exp21b_parasite_sweep.py
+python src/exp23_topology_control.py
 ```
 
 ## Requirements
